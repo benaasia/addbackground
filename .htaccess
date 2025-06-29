@@ -1,0 +1,42 @@
+# Protect admin data files
+<Files "admin_data.json">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Protect admin functions
+<Files "admin_functions.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Allow access to admin.php
+<Files "admin.php">
+    Order allow,deny
+    Allow from all
+</Files>
+
+# Allow access to track_download.php
+<Files "track_download.php">
+    Order allow,deny
+    Allow from all
+</Files>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Prevent access to sensitive files
+<FilesMatch "\.(json|log|txt)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Allow specific JSON files
+<Files "admin_data.json">
+    Order allow,deny
+    Deny from all
+</Files> 
