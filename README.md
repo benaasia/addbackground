@@ -4,4 +4,4 @@ Create stunning images with beautiful gradient and photo backgrounds. Free onlin
 
 # Demo
 
-Xem demo tại đây: [https://addbackground.net/]
+[https://addbackground.net/]
